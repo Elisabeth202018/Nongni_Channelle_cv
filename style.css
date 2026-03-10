@@ -1,0 +1,161 @@
+/* Variables de couleurs */
+:root {
+    --pink-light: #3e14bdbf;
+    --black-accent: #1a1818;
+    --grey-text: #131010;
+    --border-color: #686767;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #e0e0e0;
+    font-family: 'Helvetica', Arial, sans-serif;
+    color: #333;
+    line-height: 1.4;
+}
+
+/* Page A4 */
+.cv-page {
+    width: 21cm;
+    min-height: 25.7cm;
+    background: white;
+    margin: 20px auto;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+/* Bandeau Rose */
+.pink-banner {
+    background-color: var(--pink-light);
+    height: 180px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 40px;
+}
+
+.header-text h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.job-subtitle {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--grey-text);
+}
+
+.separator-line {
+    width: 10%;
+    height: 1px;
+    background: rgb(31, 23, 23);
+    margin-top: 10px;
+}
+
+/* Layout */
+.container {
+    display: flex !important;
+    align-items: stretch !important;
+    padding: 0 40px;
+}
+
+.sidebar section:first-of-type {
+    border-right: 1px solid #000000;
+    margin-top: 80px;
+    width: 32%;
+}
+
+.main-content {
+    width: 68%;
+    padding-left: 60px;
+    position: relative; 
+    margin-top: 40px;
+}
+
+.main-content::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #cccccc;
+}
+
+/* Photo décalée vers le haut */
+.photo-wrapper {
+    text-align: center; /* Centre la photo dans la sidebar */
+    margin-top: -180px;  /* Fait remonter la photo sur le rose */
+    margin-bottom: 9px; /* Crée l'espace pour que PROFIL ne soit pas sur le rose */
+}
+
+.profile-pic {
+    width: 80px;       /* Largeur de la photo */
+    height: 10px;      /* Hauteur de la photo */
+    object-fit: cover;  /* Évite de déformer l'image */
+    border: 5px solid white; /* Cadre blanc pour la détacher du fond */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Petite ombre portée */
+}
+
+
+.profile-pic {
+    width: 150px;
+    height: 180px;
+    object-fit: cover;
+    border: 5px solid white;
+}
+
+/* Blocs de titres noirs */
+.title-block {
+    background: var(--black-accent);
+    color: white;
+    padding: 2px 10px;
+    font-size: 0.75rem;
+    margin: 75px 0 10px 0;
+    width: fit-content;
+    min-width: 120px;
+}
+
+/* Détails */
+.contact-details p {
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+}
+
+.list {
+    list-style: none;
+    font-size: 0.85rem;
+}
+
+.list li { margin-bottom: 5px; }
+
+.intro-text {
+    font-size: 0.9rem;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+/* Items d'expérience et formation */
+.exp-item {
+    display: flex;
+    margin-bottom: 15px;
+    align-items: right;
+
+}
+
+.date {
+    width: 110px;
+    font-size: 0.8rem;
+    color: var(--grey-text);
+    flex-shrink: 0;
+    align-items: right;
+}
+
+.desc p {
+    font-size: 0.75rem;
+}
